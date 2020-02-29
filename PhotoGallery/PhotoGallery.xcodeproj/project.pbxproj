@@ -24,6 +24,9 @@
 		FBA42DCF240AECC200A43BC9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DCE240AECC200A43BC9 /* Alamofire */; };
 		FBA42DD2240AECE100A43BC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD1240AECE100A43BC9 /* Kingfisher */; };
 		FBA42DD5240AED0B00A43BC9 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD4240AED0B00A43BC9 /* SwifterSwift */; };
+		FBA42DDA240AEDC400A43BC9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DD9240AEDC400A43BC9 /* APIClient.swift */; };
+		FBA42DDE240AEDFD00A43BC9 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DDD240AEDFD00A43BC9 /* ErrorResponse.swift */; };
+		FBA42DE0240AEE0700A43BC9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DDF240AEE0700A43BC9 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListApiClient.swift; sourceTree = "<group>"; };
 		FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListDataManager.swift; sourceTree = "<group>"; };
+		FBA42DD9240AEDC400A43BC9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FBA42DDD240AEDFD00A43BC9 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorResponse.swift; path = PhotoGallery/Code/API/Client/ErrorResponse.swift; sourceTree = SOURCE_ROOT; };
+		FBA42DDF240AEE0700A43BC9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = PhotoGallery/Code/API/Client/APIRequest.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		FBA42D9B240AE1B200A43BC9 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FBA42DD7240AED8E00A43BC9 /* Client */,
+				FBA42DD8240AEDB100A43BC9 /* Requests */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -183,6 +191,39 @@
 				FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		FBA42DD7240AED8E00A43BC9 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DD9240AEDC400A43BC9 /* APIClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		FBA42DD8240AEDB100A43BC9 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DDB240AEDEA00A43BC9 /* APIRequest */,
+				FBA42DDC240AEDF100A43BC9 /* ErrorResponse */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FBA42DDB240AEDEA00A43BC9 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DDF240AEE0700A43BC9 /* APIRequest.swift */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		FBA42DDC240AEDF100A43BC9 /* ErrorResponse */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DDD240AEDFD00A43BC9 /* ErrorResponse.swift */,
+			);
+			path = ErrorResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +314,12 @@
 				FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */,
 				FBA42DA6240AE47F00A43BC9 /* BaseRouter.swift in Sources */,
 				FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */,
+				FBA42DE0240AEE0700A43BC9 /* APIRequest.swift in Sources */,
 				FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */,
 				FBA42DC2240AE91100A43BC9 /* AlbumListRouter.swift in Sources */,
 				FBA42DA8240AE48800A43BC9 /* BaseViewModel.swift in Sources */,
+				FBA42DDA240AEDC400A43BC9 /* APIClient.swift in Sources */,
+				FBA42DDE240AEDFD00A43BC9 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
