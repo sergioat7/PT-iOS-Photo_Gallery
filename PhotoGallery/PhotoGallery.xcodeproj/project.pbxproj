@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		FBA42DC4240AE91100A43BC9 /* AlbumListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */; };
 		FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */; };
 		FBA42DC6240AE91100A43BC9 /* AlbumListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */; };
+		FBA42DCF240AECC200A43BC9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DCE240AECC200A43BC9 /* Alamofire */; };
+		FBA42DD2240AECE100A43BC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD1240AECE100A43BC9 /* Kingfisher */; };
+		FBA42DD5240AED0B00A43BC9 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD4240AED0B00A43BC9 /* SwifterSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA42DD5240AED0B00A43BC9 /* SwifterSwift in Frameworks */,
+				FBA42DD2240AECE100A43BC9 /* Kingfisher in Frameworks */,
+				FBA42DCF240AECC200A43BC9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,11 @@
 			dependencies = (
 			);
 			name = PhotoGallery;
+			packageProductDependencies = (
+				FBA42DCE240AECC200A43BC9 /* Alamofire */,
+				FBA42DD1240AECE100A43BC9 /* Kingfisher */,
+				FBA42DD4240AED0B00A43BC9 /* SwifterSwift */,
+			);
 			productName = PhotoGallery;
 			productReference = FBA42D82240ADF0E00A43BC9 /* PhotoGallery.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +233,11 @@
 				Base,
 			);
 			mainGroup = FBA42D79240ADF0E00A43BC9;
+			packageReferences = (
+				FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+			);
 			productRefGroup = FBA42D83240ADF0E00A43BC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,6 +465,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBA42DCE240AECC200A43BC9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FBA42DD1240AECE100A43BC9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		FBA42DD4240AED0B00A43BC9 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBA42D7A240ADF0E00A43BC9 /* Project object */;
 }
