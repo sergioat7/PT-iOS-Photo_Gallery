@@ -10,8 +10,18 @@ import UIKit
 
 protocol AlbumListApiClientProtocol {
     
+    func getAlbumList(success: @escaping (AlbumsResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
 }
 
 class AlbumListApiClient: AlbumListApiClientProtocol {
     
+    func getAlbumList(success: @escaping (AlbumsResponse) -> Void, failure: @escaping (ErrorResponse) -> Void) {
+        
+        let request = GetAlbumListRequest()
+        APIClient.shared.sendServer(request, success: { albumListResponse in
+            success(albumListResponse)
+        }, failure: { error in
+            failure(error)
+        })
+    }
 }

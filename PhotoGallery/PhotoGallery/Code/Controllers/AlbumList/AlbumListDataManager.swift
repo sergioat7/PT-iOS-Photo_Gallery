@@ -12,6 +12,7 @@ protocol AlbumListDataManagerProtocol: class {
     /**
      * Add here your methods for communication VIEW_MODEL -> DATA_MANAGER
      */
+    func getAlbumList(success: @escaping (AlbumsResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
 }
 
 class AlbumListDataManager: BaseDataManager {
@@ -31,5 +32,8 @@ class AlbumListDataManager: BaseDataManager {
 
 extension AlbumListDataManager: AlbumListDataManagerProtocol {
     
+    func getAlbumList(success: @escaping (AlbumsResponse) -> Void, failure: @escaping (ErrorResponse) -> Void) {
+        apiClient.getAlbumList(success: success, failure: failure)
+    }
 }
 

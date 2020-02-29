@@ -12,6 +12,7 @@ protocol AlbumListViewModelProtocol: class {
     /**
      * Add here your methods for communication VIEW -> VIEW_MODEL
      */
+    func viewDidLoad()
 }
 
 class AlbumListViewModel: BaseViewModel {
@@ -35,5 +36,16 @@ class AlbumListViewModel: BaseViewModel {
 
 extension AlbumListViewModel: AlbumListViewModelProtocol {
     
+    func viewDidLoad() {
+        
+        view?.showLoading()
+        dataManager.getAlbumList(success: { albumListResponse in
+            
+            self.view?.showAlbums(albums: albumListResponse)
+            self.view?.hideLoading()
+        }, failure: { error in
+            print(error)
+        })
+    }
 }
 

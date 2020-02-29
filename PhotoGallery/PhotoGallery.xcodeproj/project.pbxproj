@@ -34,6 +34,8 @@
 		FBA42DEF240AF01F00A43BC9 /* GetPhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DEE240AF01F00A43BC9 /* GetPhotoRequest.swift */; };
 		FBA42DF2240AF62C00A43BC9 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DF1240AF62C00A43BC9 /* LoadingScreen.swift */; };
 		FBA42DF4240AF63700A43BC9 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA42DF3240AF63700A43BC9 /* LoadingScreen.xib */; };
+		FBA42DFF240AFFC600A43BC9 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DFD240AFFC600A43BC9 /* AlbumTableViewCell.swift */; };
+		FBA42E00240AFFC600A43BC9 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA42DFE240AFFC600A43BC9 /* AlbumTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		FBA42DEE240AF01F00A43BC9 /* GetPhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetPhotoRequest.swift; path = PhotoGallery/Code/API/Client/GetPhotoRequest.swift; sourceTree = SOURCE_ROOT; };
 		FBA42DF1240AF62C00A43BC9 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		FBA42DF3240AF63700A43BC9 /* LoadingScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
+		FBA42DFD240AFFC600A43BC9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		FBA42DFE240AFFC600A43BC9 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA42DBB240AE91100A43BC9 /* AlbumListView.storyboard */,
+				FBA42DF5240AFD8800A43BC9 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +300,15 @@
 			path = LoadingScreen;
 			sourceTree = "<group>";
 		};
+		FBA42DF5240AFD8800A43BC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DFD240AFFC600A43BC9 /* AlbumTableViewCell.swift */,
+				FBA42DFE240AFFC600A43BC9 /* AlbumTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,6 +379,7 @@
 				FBA42DF4240AF63700A43BC9 /* LoadingScreen.xib in Resources */,
 				FBA42DC1240AE91100A43BC9 /* AlbumListView.storyboard in Resources */,
 				FBA42D92240ADF0F00A43BC9 /* LaunchScreen.storyboard in Resources */,
+				FBA42E00240AFFC600A43BC9 /* AlbumTableViewCell.xib in Resources */,
 				FBA42D8F240ADF0F00A43BC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +402,7 @@
 				FBA42DE9240AEFD500A43BC9 /* PhotoResponse.swift in Sources */,
 				FBA42DEB240AEFEB00A43BC9 /* GetAlbumListRequest.swift in Sources */,
 				FBA42DA6240AE47F00A43BC9 /* BaseRouter.swift in Sources */,
+				FBA42DFF240AFFC600A43BC9 /* AlbumTableViewCell.swift in Sources */,
 				FBA42DEF240AF01F00A43BC9 /* GetPhotoRequest.swift in Sources */,
 				FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */,
 				FBA42DED240AEFF600A43BC9 /* GetPhotoListRequest.swift in Sources */,
