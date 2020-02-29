@@ -2,7 +2,8 @@
 //  AppDelegate.swift
 //  PhotoGallery
 //
-//  Created by alumno on 29/02/2020.
+//  Created by Sergio Aragonés on 29/02/2020.
+//  Copyright (c) 2020. All rights reserved.
 //
 
 import UIKit
@@ -13,10 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = UINavigationController()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
-
 
 }
 
