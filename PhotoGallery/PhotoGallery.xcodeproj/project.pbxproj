@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB5247E6240B260E003D539D /* PhotoListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5247E0240B260E003D539D /* PhotoListView.storyboard */; };
+		FB5247E7240B260E003D539D /* PhotoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E1240B260E003D539D /* PhotoListRouter.swift */; };
+		FB5247E8240B260E003D539D /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E2240B260E003D539D /* PhotoListViewController.swift */; };
+		FB5247E9240B260E003D539D /* PhotoListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E3240B260E003D539D /* PhotoListApiClient.swift */; };
+		FB5247EA240B260E003D539D /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E4240B260E003D539D /* PhotoListViewModel.swift */; };
+		FB5247EB240B260E003D539D /* PhotoListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E5240B260E003D539D /* PhotoListDataManager.swift */; };
+		FB5247F1240B272E003D539D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247EF240B272E003D539D /* PhotoTableViewCell.swift */; };
+		FB5247F2240B272E003D539D /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB5247F0240B272E003D539D /* PhotoTableViewCell.xib */; };
 		FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42D85240ADF0E00A43BC9 /* AppDelegate.swift */; };
 		FBA42D8F240ADF0F00A43BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA42D8E240ADF0F00A43BC9 /* Assets.xcassets */; };
 		FBA42D92240ADF0F00A43BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA42D90240ADF0F00A43BC9 /* LaunchScreen.storyboard */; };
@@ -39,6 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB5247E0240B260E003D539D /* PhotoListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoListView.storyboard; sourceTree = "<group>"; };
+		FB5247E1240B260E003D539D /* PhotoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListRouter.swift; sourceTree = "<group>"; };
+		FB5247E2240B260E003D539D /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		FB5247E3240B260E003D539D /* PhotoListApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListApiClient.swift; sourceTree = "<group>"; };
+		FB5247E4240B260E003D539D /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		FB5247E5240B260E003D539D /* PhotoListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListDataManager.swift; sourceTree = "<group>"; };
+		FB5247EF240B272E003D539D /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		FB5247F0240B272E003D539D /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		FBA42D82240ADF0E00A43BC9 /* PhotoGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA42D85240ADF0E00A43BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA42D8E240ADF0F00A43BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +99,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB5247DF240B25F7003D539D /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				FB5247ED240B2618003D539D /* API */,
+				FB5247E5240B260E003D539D /* PhotoListDataManager.swift */,
+				FB5247E1240B260E003D539D /* PhotoListRouter.swift */,
+				FB5247E2240B260E003D539D /* PhotoListViewController.swift */,
+				FB5247E4240B260E003D539D /* PhotoListViewModel.swift */,
+				FB5247EC240B2613003D539D /* View */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		FB5247EC240B2613003D539D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB5247EE240B2643003D539D /* Cell */,
+				FB5247E0240B260E003D539D /* PhotoListView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB5247ED240B2618003D539D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FB5247E3240B260E003D539D /* PhotoListApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FB5247EE240B2643003D539D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FB5247EF240B272E003D539D /* PhotoTableViewCell.swift */,
+				FB5247F0240B272E003D539D /* PhotoTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FBA42D79240ADF0E00A43BC9 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA42DBA240AE8FB00A43BC9 /* AlbumList */,
+				FB5247DF240B25F7003D539D /* PhotoList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,9 +434,11 @@
 			files = (
 				FBA42DF4240AF63700A43BC9 /* LoadingScreen.xib in Resources */,
 				FBA42DC1240AE91100A43BC9 /* AlbumListView.storyboard in Resources */,
+				FB5247E6240B260E003D539D /* PhotoListView.storyboard in Resources */,
 				FBA42D92240ADF0F00A43BC9 /* LaunchScreen.storyboard in Resources */,
 				FBA42E00240AFFC600A43BC9 /* AlbumTableViewCell.xib in Resources */,
 				FBA42D8F240ADF0F00A43BC9 /* Assets.xcassets in Resources */,
+				FB5247F2240B272E003D539D /* PhotoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5247E8240B260E003D539D /* PhotoListViewController.swift in Sources */,
 				FBA42DF2240AF62C00A43BC9 /* LoadingScreen.swift in Sources */,
 				FBA42DB9240AE67600A43BC9 /* UIViewController+Extension.swift in Sources */,
 				FBA42DC6240AE91100A43BC9 /* AlbumListDataManager.swift in Sources */,
@@ -400,17 +459,22 @@
 				FBA42DA4240AE47800A43BC9 /* BaseViewController.swift in Sources */,
 				FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */,
 				FBA42DE9240AEFD500A43BC9 /* PhotoResponse.swift in Sources */,
+				FB5247E9240B260E003D539D /* PhotoListApiClient.swift in Sources */,
 				FBA42DEB240AEFEB00A43BC9 /* GetAlbumListRequest.swift in Sources */,
+				FB5247EB240B260E003D539D /* PhotoListDataManager.swift in Sources */,
 				FBA42DA6240AE47F00A43BC9 /* BaseRouter.swift in Sources */,
+				FB5247F1240B272E003D539D /* PhotoTableViewCell.swift in Sources */,
 				FBA42DFF240AFFC600A43BC9 /* AlbumTableViewCell.swift in Sources */,
 				FBA42DEF240AF01F00A43BC9 /* GetPhotoRequest.swift in Sources */,
 				FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */,
 				FBA42DED240AEFF600A43BC9 /* GetPhotoListRequest.swift in Sources */,
 				FBA42DE0240AEE0700A43BC9 /* APIRequest.swift in Sources */,
 				FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */,
+				FB5247E7240B260E003D539D /* PhotoListRouter.swift in Sources */,
 				FBA42DC2240AE91100A43BC9 /* AlbumListRouter.swift in Sources */,
 				FBA42DA8240AE48800A43BC9 /* BaseViewModel.swift in Sources */,
 				FBA42DDA240AEDC400A43BC9 /* APIClient.swift in Sources */,
+				FB5247EA240B260E003D539D /* PhotoListViewModel.swift in Sources */,
 				FBA42DDE240AEDFD00A43BC9 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

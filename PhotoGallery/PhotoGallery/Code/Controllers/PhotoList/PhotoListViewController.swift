@@ -1,27 +1,27 @@
 //
-//  AlbumListViewController.swift
+//  PhotoListViewController.swift
 //  PhotoGallery
 //
-//  Created by Sergio Aragonés on 29/02/2020.
+//  Created by Sergio Aragonés on 01/03/2020.
 //  Copyright (c) 2020. All rights reserved.
 //
 
 import UIKit
 
-protocol AlbumListViewProtocol: BaseViewProtocol {
+protocol PhotoListViewProtocol: BaseViewProtocol {
     /**
      * Add here your methods for communication VIEW_MODEL -> VIEW
      */
-    func showAlbums(albums: AlbumsResponse)
+     func showPhotos(photos: PhotosResponse)
 }
 
-protocol AlbumListConfigurableViewProtocol: class {
+protocol PhotoListConfigurableViewProtocol: class {
 
-    func set(viewModel: AlbumListViewModelProtocol)
+    func set(viewModel: PhotoListViewModelProtocol)
     
 }
 
-class AlbumListViewController: BaseViewController {
+class PhotoListViewController: BaseViewController {
     
     // MARK: - Public properties
     
@@ -29,15 +29,15 @@ class AlbumListViewController: BaseViewController {
     
     // MARK: - Private properties
     
-    private var viewModel:AlbumListViewModelProtocol?
+    private var viewModel:PhotoListViewModelProtocol?
     
-    private var albums: AlbumsResponse?
+    private var photos: PhotosResponse?
     
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Albums"
+        title = "Photos"
         setupTableView()
         viewModel?.viewDidLoad()
     }
@@ -60,26 +60,26 @@ class AlbumListViewController: BaseViewController {
     }
     
     private func registerNib() {
-        tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
+        tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoCell")
     }
     
 }
 
-// MARK: - AlbumListViewProtocol
+// MARK: - PhotoListViewProtocol
 
-extension AlbumListViewController:  AlbumListViewProtocol {
+extension PhotoListViewController:  PhotoListViewProtocol {
     
-    func showAlbums(albums: AlbumsResponse) {
-        self.albums = albums
+    func showPhotos(photos: PhotosResponse) {
+        self.photos = photos
         tableView.reloadData()
     }
 }
 
-// MARK: - AlbumListViewProtocol
+// MARK: - PhotoListViewProtocol
 
-extension AlbumListViewController:  AlbumListConfigurableViewProtocol {
+extension PhotoListViewController:  PhotoListConfigurableViewProtocol {
     
-    func set(viewModel: AlbumListViewModelProtocol) {
+    func set(viewModel: PhotoListViewModelProtocol) {
         self.viewModel = viewModel
     }
     
@@ -87,27 +87,25 @@ extension AlbumListViewController:  AlbumListConfigurableViewProtocol {
 
 // MARK: - UITableViewDelegate
 
-extension AlbumListViewController:  UITableViewDelegate {
+extension PhotoListViewController:  UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let albumId = albums?[indexPath.row].id ?? 0
-        PhotoListRouter(albumId: albumId).push()
+        print("cell tapped")
     }
 }
 
 // MARK: - UITableViewDataSource
 
-extension AlbumListViewController:  UITableViewDataSource {
+extension PhotoListViewController:  UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        albums?.count ?? 0
+        photos?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumTableViewCell
-        cell.configure(album: albums?[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoTableViewCell
+        cell.configure(photo: photos?[indexPath.row])
         return cell
     }
 }
