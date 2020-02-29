@@ -10,9 +10,14 @@ import UIKit
 
 protocol BaseViewProtocol: class {
     
+    func showLoading()
+    func hideLoading()
 }
 
 class BaseViewController: UIViewController {
+    
+    var loadingScreen = LoadingScreen()
+    var isLoading: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +28,15 @@ class BaseViewController: UIViewController {
         
         let message = "Showing " + NSStringFromClass(self.classForCoder)
         print(message)
+    }
+    
+    func showLoading() {
+        loadingScreen.show(view: view)
+        isLoading = true
+    }
+    
+    func hideLoading() {
+        loadingScreen.hide(completion: nil)
+        isLoading = false
     }
 }
