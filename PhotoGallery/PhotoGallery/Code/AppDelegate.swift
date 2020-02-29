@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
+        AlbumListRouter().push()
         window?.makeKeyAndVisible()
         return true
     }

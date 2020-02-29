@@ -15,6 +15,12 @@
 		FBA42DA6240AE47F00A43BC9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DA5240AE47F00A43BC9 /* BaseRouter.swift */; };
 		FBA42DA8240AE48800A43BC9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DA7240AE48700A43BC9 /* BaseViewModel.swift */; };
 		FBA42DB9240AE67600A43BC9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DB8240AE67500A43BC9 /* UIViewController+Extension.swift */; };
+		FBA42DC1240AE91100A43BC9 /* AlbumListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA42DBB240AE91100A43BC9 /* AlbumListView.storyboard */; };
+		FBA42DC2240AE91100A43BC9 /* AlbumListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBC240AE91100A43BC9 /* AlbumListRouter.swift */; };
+		FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBD240AE91100A43BC9 /* AlbumListViewController.swift */; };
+		FBA42DC4240AE91100A43BC9 /* AlbumListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */; };
+		FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */; };
+		FBA42DC6240AE91100A43BC9 /* AlbumListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		FBA42DA5240AE47F00A43BC9 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		FBA42DA7240AE48700A43BC9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FBA42DB8240AE67500A43BC9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FBA42DBB240AE91100A43BC9 /* AlbumListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumListView.storyboard; sourceTree = "<group>"; };
+		FBA42DBC240AE91100A43BC9 /* AlbumListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListRouter.swift; sourceTree = "<group>"; };
+		FBA42DBD240AE91100A43BC9 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListApiClient.swift; sourceTree = "<group>"; };
+		FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		FBA42D9D240AE1BC00A43BC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBA42DBA240AE8FB00A43BC9 /* AlbumList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +148,35 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FBA42DBA240AE8FB00A43BC9 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */,
+				FBA42DBC240AE91100A43BC9 /* AlbumListRouter.swift */,
+				FBA42DBD240AE91100A43BC9 /* AlbumListViewController.swift */,
+				FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */,
+				FBA42DC8240AE94E00A43BC9 /* API */,
+				FBA42DC7240AE94300A43BC9 /* View */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		FBA42DC7240AE94300A43BC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DBB240AE91100A43BC9 /* AlbumListView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBA42DC8240AE94E00A43BC9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA42DC1240AE91100A43BC9 /* AlbumListView.storyboard in Resources */,
 				FBA42D92240ADF0F00A43BC9 /* LaunchScreen.storyboard in Resources */,
 				FBA42D8F240ADF0F00A43BC9 /* Assets.xcassets in Resources */,
 			);
@@ -207,10 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA42DB9240AE67600A43BC9 /* UIViewController+Extension.swift in Sources */,
+				FBA42DC6240AE91100A43BC9 /* AlbumListDataManager.swift in Sources */,
 				FBA42DA2240AE46E00A43BC9 /* BaseDataManager.swift in Sources */,
+				FBA42DC4240AE91100A43BC9 /* AlbumListApiClient.swift in Sources */,
 				FBA42DA4240AE47800A43BC9 /* BaseViewController.swift in Sources */,
+				FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */,
 				FBA42DA6240AE47F00A43BC9 /* BaseRouter.swift in Sources */,
+				FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */,
 				FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */,
+				FBA42DC2240AE91100A43BC9 /* AlbumListRouter.swift in Sources */,
 				FBA42DA8240AE48800A43BC9 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
