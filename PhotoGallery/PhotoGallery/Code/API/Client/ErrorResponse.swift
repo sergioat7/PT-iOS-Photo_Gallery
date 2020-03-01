@@ -8,4 +8,5 @@
 
 struct ErrorResponse {
     let error: Error?
+    let errorString = "ERROR_SERVER".localized()
 }

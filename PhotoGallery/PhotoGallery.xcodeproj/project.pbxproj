@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057E07519CDBB0DBF11BE489 /* Pods_PhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B138A34F6A94BA366D1B9760 /* Pods_PhotoGallery.framework */; };
 		FB5247E6240B260E003D539D /* PhotoListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5247E0240B260E003D539D /* PhotoListView.storyboard */; };
 		FB5247E7240B260E003D539D /* PhotoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E1240B260E003D539D /* PhotoListRouter.swift */; };
 		FB5247E8240B260E003D539D /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247E2240B260E003D539D /* PhotoListViewController.swift */; };
@@ -39,9 +40,9 @@
 		FBA42DC4240AE91100A43BC9 /* AlbumListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBE240AE91100A43BC9 /* AlbumListApiClient.swift */; };
 		FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DBF240AE91100A43BC9 /* AlbumListViewModel.swift */; };
 		FBA42DC6240AE91100A43BC9 /* AlbumListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DC0240AE91100A43BC9 /* AlbumListDataManager.swift */; };
-		FBA42DCF240AECC200A43BC9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DCE240AECC200A43BC9 /* Alamofire */; };
-		FBA42DD2240AECE100A43BC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD1240AECE100A43BC9 /* Kingfisher */; };
-		FBA42DD5240AED0B00A43BC9 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD4240AED0B00A43BC9 /* SwifterSwift */; };
+		FBA42DCF240AECC200A43BC9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DCE240AECC200A43BC9 /* SwiftPackageProductDependency */; };
+		FBA42DD2240AECE100A43BC9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD1240AECE100A43BC9 /* SwiftPackageProductDependency */; };
+		FBA42DD5240AED0B00A43BC9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FBA42DD4240AED0B00A43BC9 /* SwiftPackageProductDependency */; };
 		FBA42DDA240AEDC400A43BC9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DD9240AEDC400A43BC9 /* APIClient.swift */; };
 		FBA42DDE240AEDFD00A43BC9 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DDD240AEDFD00A43BC9 /* ErrorResponse.swift */; };
 		FBA42DE0240AEE0700A43BC9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42DDF240AEE0700A43BC9 /* APIRequest.swift */; };
@@ -57,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72EC575D60D52770C64F3F93 /* Pods-PhotoGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		B138A34F6A94BA366D1B9760 /* Pods_PhotoGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5247E0240B260E003D539D /* PhotoListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoListView.storyboard; sourceTree = "<group>"; };
 		FB5247E1240B260E003D539D /* PhotoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListRouter.swift; sourceTree = "<group>"; };
 		FB5247E2240B260E003D539D /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		FBA42DF3240AF63700A43BC9 /* LoadingScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
 		FBA42DFD240AFFC600A43BC9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		FBA42DFE240AFFC600A43BC9 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		FF004835AA6B99848A0BB650 /* Pods-PhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.release.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +114,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBA42DD5240AED0B00A43BC9 /* SwifterSwift in Frameworks */,
-				FBA42DD2240AECE100A43BC9 /* Kingfisher in Frameworks */,
-				FBA42DCF240AECC200A43BC9 /* Alamofire in Frameworks */,
+				FBA42DD5240AED0B00A43BC9 /* BuildFile in Frameworks */,
+				FBA42DD2240AECE100A43BC9 /* BuildFile in Frameworks */,
+				FBA42DCF240AECC200A43BC9 /* BuildFile in Frameworks */,
+				057E07519CDBB0DBF11BE489 /* Pods_PhotoGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171718753C36B232E2EF349A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B138A34F6A94BA366D1B9760 /* Pods_PhotoGallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99914B2C47B8F71F14DC6A3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72EC575D60D52770C64F3F93 /* Pods-PhotoGallery.debug.xcconfig */,
+				FF004835AA6B99848A0BB650 /* Pods-PhotoGallery.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FB5247DF240B25F7003D539D /* PhotoList */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +225,8 @@
 			children = (
 				FBA42D84240ADF0E00A43BC9 /* PhotoGallery */,
 				FBA42D83240ADF0E00A43BC9 /* Products */,
+				99914B2C47B8F71F14DC6A3D /* Pods */,
+				171718753C36B232E2EF349A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,9 +459,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBA42D96240ADF0F00A43BC9 /* Build configuration list for PBXNativeTarget "PhotoGallery" */;
 			buildPhases = (
+				FD40858E90BA6314B4CD9664 /* [CP] Check Pods Manifest.lock */,
 				FBA42D7E240ADF0E00A43BC9 /* Sources */,
 				FBA42D7F240ADF0E00A43BC9 /* Frameworks */,
 				FBA42D80240ADF0E00A43BC9 /* Resources */,
+				F585A1BDBC995AD29C4A6970 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -444,9 +471,9 @@
 			);
 			name = PhotoGallery;
 			packageProductDependencies = (
-				FBA42DCE240AECC200A43BC9 /* Alamofire */,
-				FBA42DD1240AECE100A43BC9 /* Kingfisher */,
-				FBA42DD4240AED0B00A43BC9 /* SwifterSwift */,
+				FBA42DCE240AECC200A43BC9 /* SwiftPackageProductDependency */,
+				FBA42DD1240AECE100A43BC9 /* SwiftPackageProductDependency */,
+				FBA42DD4240AED0B00A43BC9 /* SwiftPackageProductDependency */,
 			);
 			productName = PhotoGallery;
 			productReference = FBA42D82240ADF0E00A43BC9 /* PhotoGallery.app */;
@@ -477,9 +504,9 @@
 			);
 			mainGroup = FBA42D79240ADF0E00A43BC9;
 			packageReferences = (
-				FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				FBA42DCD240AECC200A43BC9 /* RemoteSwiftPackageReference */,
+				FBA42DD0240AECE100A43BC9 /* RemoteSwiftPackageReference */,
+				FBA42DD3240AED0B00A43BC9 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = FBA42D83240ADF0E00A43BC9 /* Products */;
 			projectDirPath = "";
@@ -509,6 +536,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F585A1BDBC995AD29C4A6970 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD40858E90BA6314B4CD9664 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FBA42D7E240ADF0E00A43BC9 /* Sources */ = {
@@ -700,6 +769,7 @@
 		};
 		FBA42D97240ADF0F00A43BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72EC575D60D52770C64F3F93 /* Pods-PhotoGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -719,6 +789,7 @@
 		};
 		FBA42D98240ADF0F00A43BC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF004835AA6B99848A0BB650 /* Pods-PhotoGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -760,7 +831,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		FBA42DCD240AECC200A43BC9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -768,7 +839,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		FBA42DD0240AECE100A43BC9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -776,7 +847,7 @@
 				minimumVersion = 5.8.0;
 			};
 		};
-		FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+		FBA42DD3240AED0B00A43BC9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
 			requirement = {
@@ -787,19 +858,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FBA42DCE240AECC200A43BC9 /* Alamofire */ = {
+		FBA42DCE240AECC200A43BC9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FBA42DCD240AECC200A43BC9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = FBA42DCD240AECC200A43BC9 /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		FBA42DD1240AECE100A43BC9 /* Kingfisher */ = {
+		FBA42DD1240AECE100A43BC9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FBA42DD0240AECE100A43BC9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = FBA42DD0240AECE100A43BC9 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		FBA42DD4240AED0B00A43BC9 /* SwifterSwift */ = {
+		FBA42DD4240AED0B00A43BC9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FBA42DD3240AED0B00A43BC9 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			package = FBA42DD3240AED0B00A43BC9 /* RemoteSwiftPackageReference */;
 			productName = SwifterSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -33,6 +33,12 @@ class AlbumListViewModel: BaseViewModel {
         self.view = view
         self.dataManager = dataManager
     }
+    
+    // MARK: - Private functions
+    
+    private func manageError(error: ErrorResponse) {
+        view?.showError(message: error.errorString, handler: nil)
+    }
 }
 
 extension AlbumListViewModel: AlbumListViewModelProtocol {
@@ -46,7 +52,8 @@ extension AlbumListViewModel: AlbumListViewModelProtocol {
             self.view?.showAlbums()
             self.view?.hideLoading()
         }, failure: { error in
-            print(error)
+            self.view?.hideLoading()
+            self.manageError(error: error)
         })
     }
     

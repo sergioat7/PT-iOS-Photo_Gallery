@@ -7,6 +7,13 @@
   
 */
 
+"app_name" = "Photo Gallery";
+
 "ALBUMS" = "Albums";
 "PHOTOS" = "Photos";
 "PHOTO" = "Photo";
+
+// Errors
+
+"ERROR_BUTTON_ACCEPT" = "Accept";
+"ERROR_SERVER" = "There was an error on getting data. Please, try again.";
