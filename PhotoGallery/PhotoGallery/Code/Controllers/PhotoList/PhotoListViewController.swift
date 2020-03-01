@@ -90,7 +90,9 @@ extension PhotoListViewController:  PhotoListConfigurableViewProtocol {
 extension PhotoListViewController:  UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("cell tapped")
+        
+        let photoId = photos?[indexPath.row].id ?? 0
+        PhotoRouter(photoId: photoId).push()
     }
 }
 

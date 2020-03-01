@@ -22,7 +22,7 @@ class PhotoListDataManager: BaseDataManager {
     // MARK: - Private variables
     
     private let apiClient: PhotoListApiClientProtocol
-    private var albumId: Int64
+    private let albumId: Int64
     
     // MARK: - Initialization
     

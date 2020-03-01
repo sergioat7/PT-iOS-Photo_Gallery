@@ -36,9 +36,9 @@ class PhotoListRouter: BaseRouter {
     
     // MARK: - Initialization
     
-    private var albumId: Int64
+    private let albumId: Int64
     
-    init(albumId: Int64) {
+    init(albumId: Int64) {
         self.albumId = albumId
     }
     
