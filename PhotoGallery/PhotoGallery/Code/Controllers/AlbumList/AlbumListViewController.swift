@@ -37,7 +37,7 @@ class AlbumListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Albums"
+        title = "ALBUMS".localized()
         setupTableView()
         viewModel?.viewDidLoad()
     }

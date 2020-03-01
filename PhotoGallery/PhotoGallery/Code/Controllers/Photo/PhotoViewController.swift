@@ -38,7 +38,7 @@ class PhotoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Photo"
+        title = "PHOTO".localized()
         viewModel?.viewDidLoad()
     }
     

@@ -37,7 +37,7 @@ class PhotoListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Photos"
+        title = "PHOTOS".localized()
         setupTableView()
         viewModel?.viewDidLoad()
     }
