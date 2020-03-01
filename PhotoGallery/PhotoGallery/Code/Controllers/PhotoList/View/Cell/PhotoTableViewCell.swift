@@ -13,16 +13,18 @@ class PhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var ivPhoto: UIImageView!
     @IBOutlet weak var lbPhoto: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    var photoCellViewModel: PhotoCellViewModel? {
+        didSet {
+            configure()
+        }
     }
     
-    func configure(photo: PhotoResponse?) {
+    func configure() {
         
-        if let imageStringUrl = photo?.thumbnailUrl, let imageUrl = URL(string: imageStringUrl) {
+        if let imageStringUrl = photoCellViewModel?.thumbnailUrl, let imageUrl = URL(string: imageStringUrl) {
             ivPhoto.kf.indicatorType = .activity
             ivPhoto.kf.setImage(with: imageUrl)
         }
-        lbPhoto.text = photo?.title ?? ""
+        lbPhoto.text = photoCellViewModel?.title ?? ""
     }
 }

@@ -6,13 +6,12 @@
 //  Copyright (c) 2020. All rights reserved.
 //
 
-import UIKit
-
 protocol PhotoListViewModelProtocol: class {
     /**
      * Add here your methods for communication VIEW -> VIEW_MODEL
      */
     func viewDidLoad()
+    func getPhotoCellViewModels() -> [PhotoCellViewModel]
 }
 
 class PhotoListViewModel: BaseViewModel {
@@ -24,6 +23,8 @@ class PhotoListViewModel: BaseViewModel {
     // MARK: - Private variables
     
     private var dataManager: PhotoListDataManagerProtocol
+    
+    private var photoCellViewModels: [PhotoCellViewModel] = []
     
     // MARK: - Initialization
     
@@ -41,11 +42,16 @@ extension PhotoListViewModel: PhotoListViewModelProtocol {
         view?.showLoading()
         dataManager.getPhotoList(success: { photoListResponse in
             
-            self.view?.showPhotos(photos: photoListResponse)
+            self.photoCellViewModels = photoListResponse.compactMap({PhotoCellViewModel(photo: $0)})
+            self.view?.showPhotos()
             self.view?.hideLoading()
         }, failure: { error in
             print(error)
         })
+    }
+    
+    func getPhotoCellViewModels() -> [PhotoCellViewModel] {
+        return photoCellViewModels
     }
 }
 

@@ -12,12 +12,14 @@ class AlbumTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lbAlbumName: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    var albumCellViewModel: AlbumCellViewModel? {
+        didSet {
+            configure()
+        }
     }
     
-    func configure(album: AlbumResponse?) {
-        lbAlbumName.text = album?.title ?? ""
+    func configure() {
+        lbAlbumName.text = albumCellViewModel?.title ?? ""
     }
     
 }

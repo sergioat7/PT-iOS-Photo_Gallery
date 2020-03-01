@@ -6,13 +6,12 @@
 //  Copyright (c) 2020. All rights reserved.
 //
 
-import UIKit
-
 protocol AlbumListViewModelProtocol: class {
     /**
      * Add here your methods for communication VIEW -> VIEW_MODEL
      */
     func viewDidLoad()
+    func getAlbumCellViewModels() -> [AlbumCellViewModel]
 }
 
 class AlbumListViewModel: BaseViewModel {
@@ -24,6 +23,8 @@ class AlbumListViewModel: BaseViewModel {
     // MARK: - Private variables
     
     private var dataManager: AlbumListDataManagerProtocol
+    
+    private var albumCellViewModels: [AlbumCellViewModel] = []
     
     // MARK: - Initialization
     
@@ -41,11 +42,16 @@ extension AlbumListViewModel: AlbumListViewModelProtocol {
         view?.showLoading()
         dataManager.getAlbumList(success: { albumListResponse in
             
-            self.view?.showAlbums(albums: albumListResponse)
+            self.albumCellViewModels = albumListResponse.compactMap({AlbumCellViewModel(album: $0)})
+            self.view?.showAlbums()
             self.view?.hideLoading()
         }, failure: { error in
             print(error)
         })
+    }
+    
+    func getAlbumCellViewModels() -> [AlbumCellViewModel] {
+        return albumCellViewModels
     }
 }
 

@@ -12,7 +12,7 @@ protocol PhotoListViewProtocol: BaseViewProtocol {
     /**
      * Add here your methods for communication VIEW_MODEL -> VIEW
      */
-     func showPhotos(photos: PhotosResponse)
+     func showPhotos()
 }
 
 protocol PhotoListConfigurableViewProtocol: class {
@@ -30,8 +30,6 @@ class PhotoListViewController: BaseViewController {
     // MARK: - Private properties
     
     private var viewModel:PhotoListViewModelProtocol?
-    
-    private var photos: PhotosResponse?
     
     // MARK: - View lifecycle
     
@@ -69,8 +67,7 @@ class PhotoListViewController: BaseViewController {
 
 extension PhotoListViewController:  PhotoListViewProtocol {
     
-    func showPhotos(photos: PhotosResponse) {
-        self.photos = photos
+    func showPhotos() {
         tableView.reloadData()
     }
 }
@@ -91,7 +88,8 @@ extension PhotoListViewController:  UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let photoId = photos?[indexPath.row].id ?? 0
+        let photoCellViewModels = viewModel?.getPhotoCellViewModels()
+        let photoId = photoCellViewModels?[indexPath.row].id ?? 0
         PhotoRouter(photoId: photoId).push()
     }
 }
@@ -101,13 +99,19 @@ extension PhotoListViewController:  UITableViewDelegate {
 extension PhotoListViewController:  UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        photos?.count ?? 0
+        
+        let photoCellViewModels = viewModel?.getPhotoCellViewModels()
+        return photoCellViewModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoTableViewCell
-        cell.configure(photo: photos?[indexPath.row])
+        
+        let photoCellViewModels = viewModel?.getPhotoCellViewModels()
+        let photoCellViewModel = photoCellViewModels?[indexPath.row]
+        cell.photoCellViewModel = photoCellViewModel
+        
         return cell
     }
 }

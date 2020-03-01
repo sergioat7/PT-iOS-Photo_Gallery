@@ -23,6 +23,8 @@
 		FB5247FF240B30B3003D539D /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5247F9240B30B3003D539D /* PhotoDataManager.swift */; };
 		FB524805240B3E76003D539D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB524807240B3E76003D539D /* Localizable.strings */; };
 		FB52481A240B41D4003D539D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB52481C240B41D4003D539D /* Localizable.strings */; };
+		FB602C09240BD6370049AE9E /* AlbumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB602C08240BD6370049AE9E /* AlbumCellViewModel.swift */; };
+		FB602C0B240BDC960049AE9E /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB602C0A240BDC960049AE9E /* PhotoCellViewModel.swift */; };
 		FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA42D85240ADF0E00A43BC9 /* AppDelegate.swift */; };
 		FBA42D8F240ADF0F00A43BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA42D8E240ADF0F00A43BC9 /* Assets.xcassets */; };
 		FBA42D92240ADF0F00A43BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA42D90240ADF0F00A43BC9 /* LaunchScreen.storyboard */; };
@@ -71,6 +73,8 @@
 		FB5247F9240B30B3003D539D /* PhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
 		FB524806240B3E76003D539D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB52481B240B41D4003D539D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB602C08240BD6370049AE9E /* AlbumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellViewModel.swift; sourceTree = "<group>"; };
+		FB602C0A240BDC960049AE9E /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 		FBA42D82240ADF0E00A43BC9 /* PhotoGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA42D85240ADF0E00A43BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA42D8E240ADF0F00A43BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			children = (
 				FB5247EF240B272E003D539D /* PhotoTableViewCell.swift */,
 				FB5247F0240B272E003D539D /* PhotoTableViewCell.xib */,
+				FB602C0A240BDC960049AE9E /* PhotoCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			children = (
 				FBA42DFD240AFFC600A43BC9 /* AlbumTableViewCell.swift */,
 				FBA42DFE240AFFC600A43BC9 /* AlbumTableViewCell.xib */,
+				FB602C08240BD6370049AE9E /* AlbumCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				FBA42DE7240AEFCC00A43BC9 /* AlbumResponse.swift in Sources */,
 				FBA42DC4240AE91100A43BC9 /* AlbumListApiClient.swift in Sources */,
 				FBA42DA4240AE47800A43BC9 /* BaseViewController.swift in Sources */,
+				FB602C09240BD6370049AE9E /* AlbumCellViewModel.swift in Sources */,
 				FBA42DC5240AE91100A43BC9 /* AlbumListViewModel.swift in Sources */,
 				FBA42DE9240AEFD500A43BC9 /* PhotoResponse.swift in Sources */,
 				FB5247E9240B260E003D539D /* PhotoListApiClient.swift in Sources */,
@@ -531,6 +538,7 @@
 				FBA42DEF240AF01F00A43BC9 /* GetPhotoRequest.swift in Sources */,
 				FBA42DC3240AE91100A43BC9 /* AlbumListViewController.swift in Sources */,
 				FBA42DED240AEFF600A43BC9 /* GetPhotoListRequest.swift in Sources */,
+				FB602C0B240BDC960049AE9E /* PhotoCellViewModel.swift in Sources */,
 				FBA42DE0240AEE0700A43BC9 /* APIRequest.swift in Sources */,
 				FBA42D86240ADF0E00A43BC9 /* AppDelegate.swift in Sources */,
 				FB5247E7240B260E003D539D /* PhotoListRouter.swift in Sources */,

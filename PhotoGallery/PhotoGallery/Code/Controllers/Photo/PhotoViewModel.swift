@@ -6,8 +6,6 @@
 //  Copyright (c) 2020. All rights reserved.
 //
 
-import UIKit
-
 protocol PhotoViewModelProtocol: class {
     /**
      * Add here your methods for communication VIEW -> VIEW_MODEL

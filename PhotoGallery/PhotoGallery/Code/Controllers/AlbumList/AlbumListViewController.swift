@@ -12,7 +12,7 @@ protocol AlbumListViewProtocol: BaseViewProtocol {
     /**
      * Add here your methods for communication VIEW_MODEL -> VIEW
      */
-    func showAlbums(albums: AlbumsResponse)
+    func showAlbums()
 }
 
 protocol AlbumListConfigurableViewProtocol: class {
@@ -30,9 +30,7 @@ class AlbumListViewController: BaseViewController {
     // MARK: - Private properties
     
     private var viewModel:AlbumListViewModelProtocol?
-    
-    private var albums: AlbumsResponse?
-    
+        
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
@@ -69,8 +67,7 @@ class AlbumListViewController: BaseViewController {
 
 extension AlbumListViewController:  AlbumListViewProtocol {
     
-    func showAlbums(albums: AlbumsResponse) {
-        self.albums = albums
+    func showAlbums() {
         tableView.reloadData()
     }
 }
@@ -91,7 +88,8 @@ extension AlbumListViewController:  UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let albumId = albums?[indexPath.row].id ?? 0
+        let albumCellViewModels = viewModel?.getAlbumCellViewModels()
+        let albumId = albumCellViewModels?[indexPath.row].id ?? 0
         PhotoListRouter(albumId: albumId).push()
     }
 }
@@ -101,13 +99,19 @@ extension AlbumListViewController:  UITableViewDelegate {
 extension AlbumListViewController:  UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        albums?.count ?? 0
+        
+        let albumCellViewModels = viewModel?.getAlbumCellViewModels()
+        return albumCellViewModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumTableViewCell
-        cell.configure(album: albums?[indexPath.row])
+        
+        let albumCellViewModels = viewModel?.getAlbumCellViewModels()
+        let albumCellViewModel = albumCellViewModels?[indexPath.row]
+        cell.albumCellViewModel = albumCellViewModel
+        
         return cell
     }
 }
